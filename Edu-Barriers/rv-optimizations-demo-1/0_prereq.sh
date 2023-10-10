@@ -15,7 +15,7 @@ cd linux; git checkout v6.5; cd ..
 git clone https://github.com/riscv-software-src/opensbi.git
 cd opensbi; git checkout v1.1; cd ..
 git clone https://github.com/qemu/qemu.git
-cd qemu; git checkout v8.0.3; cd ..
+cd qemu; git checkout v8.1.0; cd ..
 git clone https://github.com/hugsy/gef.git
 
 mkdir -p output
