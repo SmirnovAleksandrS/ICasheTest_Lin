@@ -14,6 +14,10 @@ ${CROSS_COMPILE}gcc -O2 -g -fno-stack-protector demo_races/memset.c -o $ROOTFS_O
 cp --preserve=mode demo_races/gdbs.sh $ROOTFS_OVERLAY/opt
 mkdir -p $ROOTFS_OVERLAY/etc/profile.d
 cp demo_races/overcommit.sh $ROOTFS_OVERLAY/etc/profile.d
+mkdir -p $ROOTFS_OVERLAY/root/.ssh
+cp demo_races/authorized_keys $ROOTFS_OVERLAY/root/.ssh
+mkdir -p $ROOTFS_OVERLAY/etc/dropbear
+cp demo_races/dropbear_ed25519_host_key $ROOTFS_OVERLAY/etc/dropbear
 
 gcc -O2 -g -pthread demo_races/icache.c -o output/icache
 gcc -O2 -g -pthread demo_races/cpu_opts.c -o output/cpu_opts
