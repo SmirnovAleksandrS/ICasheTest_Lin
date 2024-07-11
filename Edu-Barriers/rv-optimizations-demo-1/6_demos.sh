@@ -19,6 +19,9 @@ cp demo_races/authorized_keys $ROOTFS_OVERLAY/root/.ssh
 mkdir -p $ROOTFS_OVERLAY/etc/dropbear
 cp demo_races/dropbear_ed25519_host_key $ROOTFS_OVERLAY/etc/dropbear
 
+CC=${CROSS_COMPILE}gcc make -C demo_races/pagemap
+cp demo_races/pagemap/pagemap $ROOTFS_OVERLAY/opt/
+
 gcc -O2 -g -pthread demo_races/icache.c -o output/icache
 gcc -O2 -g -pthread demo_races/cpu_opts.c -o output/cpu_opts
 

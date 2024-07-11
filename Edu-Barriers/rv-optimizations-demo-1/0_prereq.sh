@@ -17,6 +17,8 @@ cd opensbi; git checkout v1.1; cd ..
 git clone https://github.com/qemu/qemu.git
 cd qemu; git checkout v9.0.1; cd ..
 git clone https://github.com/hugsy/gef.git
+git clone https://github.com/dwks/pagemap.git demo_races/pagemap
+sed -i 's/CC = gcc/CC ?= gcc/' demo_races/pagemap/Makefile
 
 mkdir -p output
 mkdir -p $ROOTFS_OVERLAY
