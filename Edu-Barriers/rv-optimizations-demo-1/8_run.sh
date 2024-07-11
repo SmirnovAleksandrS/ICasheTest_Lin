@@ -15,4 +15,6 @@
     -device virtio-net-device,netdev=net \
     -netdev user,id=net,hostfwd=tcp::2345-:2345,hostfwd=tcp::10022-:22 \
     -gdb tcp::1234 \
+    -monitor telnet:127.0.0.1:1122,server,nowait \
+    -serial mon:stdio \
     $1
