@@ -13,7 +13,7 @@ git clone -b 2024.11.x git://git.busybox.net/buildroot
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux; git checkout v6.13; cd ..
 git clone https://github.com/riscv-software-src/opensbi.git
-cd opensbi; git checkout v1.1; cd ..
+cd opensbi; git checkout v1.6; cd ..
 git clone https://github.com/qemu/qemu.git
 cd qemu; git checkout v9.1.1; cd ..
 git clone https://github.com/hugsy/gef.git
