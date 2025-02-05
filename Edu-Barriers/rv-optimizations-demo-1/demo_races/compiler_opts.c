@@ -37,9 +37,7 @@ static void* p2(void *arg)
 	#if 1
 	unsigned long long wait_cnt = 10;
 	while (!ready) {
-		msleep(100);
-		if (!--wait_cnt)
-			break;
+		usleep(100 * 1000);
 	}
 	#elif 1
 	unsigned long long wait_cnt = 100 * 1000 * 1000;
