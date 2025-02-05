@@ -15,7 +15,7 @@ cd linux; git checkout v6.7; cd ..
 git clone https://github.com/riscv-software-src/opensbi.git
 cd opensbi; git checkout v1.1; cd ..
 git clone https://github.com/qemu/qemu.git
-cd qemu; git checkout v9.0.1; cd ..
+cd qemu; git checkout v9.1.1; cd ..
 git clone https://github.com/hugsy/gef.git
 git clone https://github.com/dwks/pagemap.git demo_races/pagemap
 sed -i 's/CC = gcc/CC ?= gcc/' demo_races/pagemap/Makefile
