@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -x
+
+./objdump --disassembler-color=color --visualize-jumps=extended-color -d $@
